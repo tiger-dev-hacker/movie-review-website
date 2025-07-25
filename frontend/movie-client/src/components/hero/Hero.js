@@ -16,7 +16,7 @@ const Hero = ({ movies }) => {
                     movies.map((movie) => (
                         <Paper key={movie.id}>
                             <div className='movie-card-container'>
-                                <div className='movie-card'>
+                                <div className='movie-card' style={{"--img" : `url(${movie.backdrops[0]})`}}>
                                     <div className='movie-detail'>
                                         <div className='movie-poster'>
                                             <img src={movie.poster} alt={movie.title || 'Movie Poster'} />
