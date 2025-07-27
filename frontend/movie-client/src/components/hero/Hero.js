@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 import {Link, useNavigate} from "react-router-dom";
 import Button from 'react-bootstrap/Button';
+import Trailer from '../trailer/Trailer';
 
 
 const Hero = ({movies}) => {
@@ -33,9 +34,8 @@ const Hero = ({movies}) => {
                                         <h4>{movie.title}</h4>
                                     </div>
                                     <div className="movie-buttons-container">
-                                        <Link to={`/Trailer/${movie.trailerLink?.substring(movie.trailerLink.length - 11) || ''
-}`}>
-                                            <div className="play-button-icon-container">
+                                        <Link to={`/trailer/${movie.imdbId}`}>
+                                                <div className="play-button-icon-container">
                                                 <FontAwesomeIcon className="play-button-icon"
                                                     icon = {faCirclePlay}
                                                 />

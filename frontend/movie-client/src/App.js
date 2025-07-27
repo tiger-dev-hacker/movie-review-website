@@ -1,11 +1,11 @@
 import './App.css';
 import api from './api/axiosConfig';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from './components/Layout';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/home/Home';
-import Trailer from './components/trailer/Trailer';
-import Reviews from './components/reviews/Reviews';
+
+import ReactDOM from "react-dom/client"; 
 
 function App() {
   const [movies, setMovies] = useState();
@@ -38,25 +38,15 @@ function App() {
 
   return (
     <div className="App">
+      
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home movies={movies} />} />
-          <Route path="Trailer/:ytTrailerId" element={<Trailer />} />
-          <Route
-            path="api/v1/reviews/:movieId"
-            element={
-              <Reviews
-                getMovieData={getMovieData}
-                movie={movie}
-                reviews={reviews}
-                setReviews={setReviews}
-              />
-            }
-          />
         </Route>
       </Routes>
     </div>
   );
 }
 
-export default App;
+export default App; 
+

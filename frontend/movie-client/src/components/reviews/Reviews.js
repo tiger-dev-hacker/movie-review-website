@@ -4,7 +4,7 @@ import {useParams} from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap';
 import ReviewForm from '../reviewForm/ReviewForm';
 
-import React from 'react'
+import React from 'react';
 
 const Reviews = ({getMovieData,movie,reviews,setReviews}) => {
 
