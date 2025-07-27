@@ -13,7 +13,7 @@ const Hero = ({movies}) => {
 
     function reviews(movieId)
     {
-        navigate(`/ap1/v1/reviews/${movieId}`);
+        navigate(`/api/v1/reviews/${movieId}`);
     }
 
   return (

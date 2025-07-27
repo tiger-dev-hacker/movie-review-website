@@ -5,12 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import k1ngc0br4.movies.demo.Movies.Review;
-
 import java.util.Map;
 import java.util.Optional;
-
-import k1ngc0br4.movies.demo.Movies.ReviewService;
 
 @RestController
 @RequestMapping("/api/v1/reviews")
